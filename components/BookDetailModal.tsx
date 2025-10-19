@@ -1,16 +1,16 @@
-
 import React, { useState } from 'react';
 import { Book } from '../types';
-import { CloseIcon } from './icons';
+import { CloseIcon, CreditCardIcon } from './icons';
 import { StarRating } from './StarRating';
 
 interface BookDetailModalProps {
   book: Book | null;
   onClose: () => void;
   onUpdateBook: (updatedBook: Book) => void;
+  onBuyNow: () => void;
 }
 
-const BookDetailModal: React.FC<BookDetailModalProps> = ({ book, onClose, onUpdateBook }) => {
+const BookDetailModal: React.FC<BookDetailModalProps> = ({ book, onClose, onUpdateBook, onBuyNow }) => {
   const [newComment, setNewComment] = useState('');
   const [userRating, setUserRating] = useState(0);
 
@@ -77,9 +77,16 @@ const BookDetailModal: React.FC<BookDetailModalProps> = ({ book, onClose, onUpda
           
           <div className="flex items-center justify-between bg-sky-50 p-4 rounded-lg mb-6">
             <span className="text-2xl font-bold text-sky-700">{`$${book.price}`}</span>
-            <div className="flex space-x-2 rtl:space-x-reverse">
-              <button className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition">عرض PDF</button>
-              <button className="px-4 py-2 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition">تحميل الكتاب</button>
+            <div className="flex flex-col sm:flex-row gap-2">
+              <button className="px-4 py-2 bg-gray-200 text-gray-800 font-semibold rounded-lg hover:bg-gray-300 transition text-sm">عرض PDF</button>
+              <button className="px-4 py-2 bg-sky-600 text-white font-semibold rounded-lg hover:bg-sky-700 transition text-sm">تحميل الكتاب</button>
+               <button 
+                onClick={onBuyNow}
+                className="flex items-center justify-center gap-2 px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition text-sm"
+               >
+                <CreditCardIcon className="w-5 h-5" />
+                <span>شراء الآن</span>
+              </button>
             </div>
           </div>
 
