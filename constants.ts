@@ -1,0 +1,126 @@
+
+import { Book } from './types';
+
+export const CATEGORIES: string[] = [
+  "أدب",
+  "تاريخ",
+  "علوم",
+  "تطوير الذات",
+  "روايات",
+  "شعر"
+];
+
+export const BOOKS: Book[] = [
+  {
+    id: 1,
+    title: "ظل الريح",
+    author: "كارلوس رويث زافون",
+    description: "في برشلونة المنسية، يكتشف فتى صغير كتابًا غامضًا يقوده إلى مغامرة في قلب الأدب والأسرار المظلمة للمدينة.",
+    coverImage: "https://picsum.photos/seed/book1/400/600",
+    category: "روايات",
+    rating: 4.8,
+    ratingsCount: 2500,
+    price: 15.99,
+    comments: [
+      { id: 1, user: "نورة", avatar: "https://i.pravatar.cc/150?u=nora", text: "رواية ساحرة تأخذك لعالم آخر!" },
+      { id: 2, user: "أحمد", avatar: "https://i.pravatar.cc/150?u=ahmed", text: "أفضل ما قرأت هذا العام." },
+    ],
+  },
+  {
+    id: 2,
+    title: "مقدمة ابن خلدون",
+    author: "ابن خلدون",
+    description: "عمل موسوعي يعتبر من أوائل الكتب في علم الاجتماع والتاريخ، يناقش فيه ابن خلدون طبائع العمران البشري.",
+    coverImage: "https://picsum.photos/seed/book2/400/600",
+    category: "تاريخ",
+    rating: 4.9,
+    ratingsCount: 1800,
+    price: 22.50,
+    comments: [
+       { id: 1, user: "فاطمة", avatar: "https://i.pravatar.cc/150?u=fatima", text: "كتاب أساسي لكل مهتم بالتاريخ." },
+    ],
+  },
+  {
+    id: 3,
+    title: "قصة قصيرة عن الزمن",
+    author: "ستيفن هوكينج",
+    description: "رحلة مبسطة ومذهلة عبر ألغاز الكون، من الانفجار العظيم إلى الثقوب السوداء.",
+    coverImage: "https://picsum.photos/seed/book3/400/600",
+    category: "علوم",
+    rating: 4.7,
+    ratingsCount: 3200,
+    price: 18.00,
+    comments: [
+      { id: 1, user: "علي", avatar: "https://i.pravatar.cc/150?u=ali", text: "يبسط المفاهيم المعقدة بشكل رائع." },
+    ],
+  },
+  {
+    id: 4,
+    title: "العادات السبع للناس الأكثر فعالية",
+    author: "ستيفن كوفي",
+    description: "دليل عملي لتحقيق النجاح الشخصي والمهني من خلال تبني سبع عادات أساسية.",
+    coverImage: "https://picsum.photos/seed/book4/400/600",
+    category: "تطوير الذات",
+    rating: 4.6,
+    ratingsCount: 4500,
+    price: 12.00,
+    comments: [
+        { id: 1, user: "سارة", avatar: "https://i.pravatar.cc/150?u=sara", text: "غير حياتي للأفضل، أنصح به بشدة." },
+        { id: 2, user: "محمد", avatar: "https://i.pravatar.cc/150?u=mohammed", text: "نصائح عملية ومفيدة جداً." },
+    ],
+  },
+  {
+    id: 5,
+    title: "ديوان المتنبي",
+    author: "أبو الطيب المتنبي",
+    description: "مجموعة من أروع قصائد الشعر العربي التي تعبر عن الحكمة والفخر والشجاعة.",
+    coverImage: "https://picsum.photos/seed/book5/400/600",
+    category: "شعر",
+    rating: 4.9,
+    ratingsCount: 1500,
+    price: 19.99,
+    comments: [
+       { id: 1, user: "خالد", avatar: "https://i.pravatar.cc/150?u=khaled", text: "قمة البلاغة والجمال." },
+    ],
+  },
+   {
+    id: 6,
+    title: "الأمير الصغير",
+    author: "أنطوان دو سانت إكزوبيري",
+    description: "قصة رمزية عن الصداقة والحب والخسارة من خلال عيون أمير صغير يسافر بين الكواكب.",
+    coverImage: "https://picsum.photos/seed/book6/400/600",
+    category: "أدب",
+    rating: 4.8,
+    ratingsCount: 5000,
+    price: 9.99,
+    comments: [
+       { id: 1, user: "ياسمين", avatar: "https://i.pravatar.cc/150?u=yasmin", text: "قصة مؤثرة للكبار والصغار." },
+    ],
+  },
+  {
+    id: 7,
+    title: "فن اللامبالاة",
+    author: "مارك مانسون",
+    description: "منهج جديد للحياة السعيدة يتحدى الأفكار التقليدية حول الإيجابية والسعي وراء السعادة.",
+    coverImage: "https://picsum.photos/seed/book7/400/600",
+    category: "تطوير الذات",
+    rating: 4.5,
+    ratingsCount: 6200,
+    price: 14.50,
+    comments: [],
+  },
+  {
+    id: 8,
+    title: "ألف شمس ساطعة",
+    author: "خالد حسيني",
+    description: "رواية مؤثرة عن صداقة امرأتين في أفغانستان على مدى ثلاثة عقود من الاضطرابات.",
+    coverImage: "https://picsum.photos/seed/book8/400/600",
+    category: "روايات",
+    rating: 4.9,
+    ratingsCount: 3800,
+    price: 16.50,
+    comments: [
+      { id: 1, user: "حسن", avatar: "https://i.pravatar.cc/150?u=hassan", text: "رواية لا تُنسى، مليئة بالمشاعر." },
+    ],
+  },
+];
